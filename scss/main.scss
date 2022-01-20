@@ -1,4 +1,20 @@
 @import "_settings.scss";
+/*Slick-Slider*/
+@mixin stories-dots-li($img,$title){
+    background: url($img);
+	background-size:100%;
+	margin-left:30px;
+	font-size:14px;
+	&:before{
+		content:$title;
+		position:absolute;
+		bottom:-18px;
+		left: 0;
+		right: 0;
+		text-align: center;
+	}
+}
+
 /*variables*/
 %icon{
 	width:32px;
@@ -823,41 +839,16 @@ height:392px;
 	position:relative;
 	}
 	& li:nth-child(1){
-	background: url(../img/banki_stories.png);
-	background-size:100%;
-	margin-left:30px;
-	&:before{
-		content:"Банки";
-		position:absolute;
-		bottom:-18px;
-		left: 0;
-		right: 0;
-		text-align: center;
-	}
+	@include img("../img/banki_stories.png");
+	@include title("Банки");
 	}
 	& li:nth-child(2){
-	background: url(../img/butilki_stories.png);
-	background-size:100%;
-	&:before{
-		content:"Бутылки";
-		position:absolute;
-		bottom:-18px;
-		left: 0;
-		right: 0;
-		text-align: center;
-	}
+	@include img("../img/butilki_stories.png");
+	@include title("Бутылки");
 	}
 	& li:nth-child(3){
-	background: url(../img/butili_stories.jpg);
-	background-size:100%;
-	&:before{
-		content:"Бутыли";
-		position:absolute;
-		bottom:-18px;
-		left: 0;
-		right: 0;
-		text-align: center;
-	}
+	@include img("../img/butili_stories.jpg");
+	@include title("Бутыли");
 	}
 	& li.slick-active::after{
 	content:"";
