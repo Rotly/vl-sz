@@ -148,6 +148,7 @@
 		font-weight: 300;
 		line-height: 21px;
 		letter-spacing: 1px;
+		color:#000;
 		}
 }
 
@@ -406,7 +407,7 @@ justify-content: space-between;
 .about__table {
 @extend %container;
 margin-top:30px;
-		
+color:#000;
 		&-row {
 		display:flex;
 		width:1008px;

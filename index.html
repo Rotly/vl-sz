@@ -13,6 +13,8 @@
 </head>
 <body>
 
+
+
 <!-- Шапка -->
 	<header class="header">
 		<div class="header__row">
@@ -723,10 +725,6 @@
 			</div>
 		</div>
 		<div style="height:100px;"></div>
-
-
-
-
 		</div>
 	</div>
 
@@ -750,15 +748,15 @@
 			$('.card__slider').slick({
 			dots: true,
 			dotsClass: 'stories__dots',
+			arrows: false,
 			mobileFirst: true, 
+			adaptiveHeight: true,
 			responsive: [
 			{
 				breakpoint: 620,
 				settings: "unslick"
 			}]
 			});
-
-
 </script>
 </body>
 </html>
