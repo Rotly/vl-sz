@@ -131,7 +131,7 @@ left: 15px;
   max-width: 219px;
   width: 48%;
   padding: 0;
-  height: 60px;
+  height: 45px;
   border-radius: 12px;
   border: 1px solid #ffcf00; 
   background-color: white;
@@ -149,7 +149,7 @@ left: 15px;
   max-width: 220px;
   width: 48%;
   padding: 0;
-  height: 60px;
+  height: 45px;
   border-radius: 12px;
   background-color: #359f08;
   font-size: 17px;
@@ -192,10 +192,6 @@ margin-left:5px;
         right:0;
         background-position:center;
         bottom:4px;
-		height:45px;
 		padding:0;
     }
-	.message__chat-call{
-		height:45px;
-	}
 }
