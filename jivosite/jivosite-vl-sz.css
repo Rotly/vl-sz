@@ -103,11 +103,12 @@
     right: 0;
 	margin-right:5px;
 text-align:center;
+right:1%;
 }
 #jivo_custom_widget.jivo_online ,#jivo_custom_widget::after{
 content:"Написать";
 position: relative;
-left: 15px;
+left: 0;
 }
 .message__chat-media{   
   max-width: 100%;
@@ -141,7 +142,7 @@ left: 15px;
   justify-content: center;
   cursor: pointer;
   position:fixed;
-  left:0;
+  left:1%;
   bottom:3px;
 }
 .message__chat-chating{
@@ -163,7 +164,7 @@ left: 15px;
     width: 6px;
     height: 29px;
     margin-right: 0px;
-    top:0;
+    top:7px;
     right: 0;
     position: relative;
     left: -15px;
