@@ -21,7 +21,7 @@
 	position: fixed;
 	z-index: 300000;
 	width: 346px;
-	height: 70px;
+	height: 45px;
 	background-repeat: no-repeat;
 	right: 65px;
 	border-radius: 10px 10px 0px 0px;
@@ -81,13 +81,13 @@
 /*New styles*/
 #jivo_custom_widget.jivo_online ,#jivo_custom_widget{
 	position:fixed;
-	padding: 0 30px;
+	padding: 0;
     bottom:4px;
 	width:48%;
 	max-width: 48%;
 	height: 45px;
     background-color:#1072a7;
-	padding: 0 30px;
+	padding: 0;
     border-radius: 12px;
     font-size: 15px;
     color: white;
