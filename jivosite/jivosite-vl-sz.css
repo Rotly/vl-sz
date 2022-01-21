@@ -87,7 +87,6 @@
 	max-width: 48%;
 	height: 45px;
     background-color:#1072a7;
-	padding: 0;
     border-radius: 12px;
     font-size: 15px;
     color: white;
@@ -158,7 +157,6 @@ left: 15px;
   align-items: center;
   justify-content: space-around;
   cursor: pointer;
-  padding: 0;
 }
 #jivo_custom_widget.jivo_online ,#jivo_custom_widget::before{
     content: url(../jivosite/chat.png);
