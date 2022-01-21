@@ -1,0 +1,201 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+/* hide the original widget - that there were no two labels on the screen*/
+#jivo_chat_widget{
+	display: none;
+}
+
+.jivo_online{
+	display: none!important;
+}
+.message__chat-tovar{
+	display:flex;
+}
+/* the default style - for offline messages if no one is online */
+#jivo_custom_widget{
+	position: fixed;
+	z-index: 300000;
+	width: 346px;
+	height: 70px;
+	background-repeat: no-repeat;
+	right: 65px;
+	border-radius: 10px 10px 0px 0px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	cursor: pointer;
+	top:unset;
+	bottom:25px;
+}
+
+/* when you hover the label should be shifted to the right by 3px */
+
+
+/* if there are operators online - show other label
+#jivo_custom_widget.jivo_online{
+	position: fixed;
+	z-index: 300000;
+	width: 346px;
+	height: 70px;
+	background-image: url("../img/chat-vl.png");
+	background-repeat: no-repeat;
+	right: 65px;
+	border-radius: 10px 10px 0px 0px;
+	display: flex;
+	cursor: pointer;
+	top:unset;
+	bottom:25px;
+}
+*/
+
+
+@media(max-width:480px){
+	.message__chat-tovar,.message__chat-call__link{
+	display:none;
+}
+	/*Old styles
+#jivo_custom_widget.jivo_online ,#jivo_custom_widget{
+	padding: 0 30px;
+    bottom:5px;
+	width:185px;
+	max-width: 220px;
+	height: 60px;
+    border-radius: 12px;
+    background-image: url("../img/408.png");
+	background-position: center;
+    font-size: 17px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
+    right: 5%;
+	margin-right:20px;
+}
+*/
+/*New styles*/
+#jivo_custom_widget.jivo_online ,#jivo_custom_widget{
+	position:fixed;
+	padding: 0 30px;
+    bottom:4px;
+	width:48%;
+	max-width: 48%;
+	height: 45px;
+    background-color:#1072a7;
+	padding: 0 30px;
+    border-radius: 12px;
+    font-size: 15px;
+    color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    cursor: pointer;
+    right: 0;
+	margin-right:5px;
+text-align:center;
+}
+#jivo_custom_widget.jivo_online ,#jivo_custom_widget::after{
+content:"Написать";
+position: relative;
+left: 15px;
+}
+.message__chat-media{   
+  max-width: 100%;
+  width: 50%;
+  margin: 0 auto;
+  background-color: none;
+  border-radius: 12px;
+  height: 45px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  top: 231px;
+  position: absolute;
+  left: 7px;
+  opacity: 1;
+  visibility: visible;
+}
+.message__chat-call{
+  max-width: 219px;
+  width: 48%;
+  padding: 0;
+  height: 60px;
+  border-radius: 12px;
+  border: 1px solid #ffcf00; 
+  background-color: white;
+  font-size: 17px;
+  color: #20222a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position:fixed;
+  left:0;
+  bottom:3px;
+}
+.message__chat-chating{
+  max-width: 220px;
+  width: 48%;
+  padding: 0;
+  height: 60px;
+  border-radius: 12px;
+  background-color: #359f08;
+  font-size: 17px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  cursor: pointer;
+  padding: 0;
+}
+#jivo_custom_widget.jivo_online ,#jivo_custom_widget::before{
+    content: url(../jivosite/chat.png);
+    width: 6px;
+    height: 29px;
+    margin-right: 0px;
+    top:0;
+    right: 0;
+    position: relative;
+    left: -15px;
+}
+
+
+/*New styles*/
+
+
+}
+
+.message__chat-call span{
+margin-left:5px;
+}
+@media(max-width:400px){
+    #jivo_custom_widget.jivo_online ,#jivo_custom_widget{
+        right:0;
+            bottom: 4px;
+    position: fixed;
+    }
+}
+@media(max-width:380px){
+    #jivo_custom_widget.jivo_online ,#jivo_custom_widget{
+        right:0;
+        background-position:center;
+        bottom:4px;
+		height:45px;
+		padding:0;
+    }
+	.message__chat-call{
+		height:45px;
+	}
+}
