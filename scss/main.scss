@@ -22,6 +22,9 @@
 	max-width:32px;
 	max-height: 32px;
 }
+.wrapper{
+	position:relative;
+}
 .sticky{
 	position:sticky;
 	top:0;
@@ -105,7 +108,6 @@
 		letter-spacing: 0.5px;
 		position: absolute;
     	margin-left: 20px;
-		top:50px;
 	}
 		
 		&__logo-img {
@@ -446,7 +448,12 @@ color:#000;
 	}
 }
 
-	
+.footer{
+	height:100px;
+	width:100%;
+	position:relative;
+	bottom:0;
+}	
 
 @media(max-width:1620px){
 	.card{
@@ -752,7 +759,7 @@ height:392px;
 		font-size: 18px;
 		font-weight: 700;
 		line-height: 18px;
-		margin:15px 0 0 25px;
+		margin:35px 0 0 25px;
 		}
 	}
 
@@ -840,16 +847,13 @@ height:392px;
 	position:relative;
 	}
 	& li:nth-child(1){
-	@include img("../img/banki_stories.png");
-	@include title("Банки");
+	@include stories-dots-li("../img/banki_stories.png","Банки");
 	}
 	& li:nth-child(2){
-	@include img("../img/butilki_stories.png");
-	@include title("Бутылки");
+	@include stories-dots-li("../img/butilki_stories.png","Бутылки");
 	}
 	& li:nth-child(3){
-	@include img("../img/butili_stories.jpg");
-	@include title("Бутыли");
+	@include stories-dots-li("../img/butili_stories.jpg","Бутыли");
 	}
 	& li.slick-active::after{
 	content:"";
@@ -885,7 +889,7 @@ height:392px;
 		}
 		&__logo-title{
 			width:170px;
-			margin:0 0 0 8px;
+			margin:25px 0 0 8px;
 		}
 	    &__info{
 		width:100%;

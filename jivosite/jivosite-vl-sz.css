@@ -52,9 +52,38 @@
 	bottom:25px;
 }
 */
+.message__chat-mob{
+	display: none;
+}
+.message__chat-desk{
+  max-width: 185px;
+  width: 100%;
+  padding: 0px 30px 0 0;
+  height: 60px;
+  border-radius: 12px;
+  background-color: #359f08;
+  font-size: 17px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  cursor: pointer;
+  position:fixed;
+  bottom:20px;
+  right:30px;
+}
+.message__chat-desk img{
+	width: 50px;
+    height: 50px;
+    margin: 10px;
+    border-radius: 50%;
+}
 
-
-@media(max-width:480px){
+@media(max-width:480px)
+{
+	.message__chat-desk{
+		display: none;
+	}
 	.message__chat-tovar,.message__chat-call__link{
 	display:none;
 }
@@ -108,9 +137,9 @@ right:1%;
 #jivo_custom_widget.jivo_online ,#jivo_custom_widget::after{
 content:"Написать";
 position: relative;
-left: 0;
+left: 15px;
 }
-.message__chat-media{   
+.message__chat-mob{   
   max-width: 100%;
   width: 50%;
   margin: 0 auto;
@@ -144,6 +173,7 @@ left: 0;
   position:fixed;
   left:1%;
   bottom:3px;
+  z-index:2;
 }
 .message__chat-chating{
   max-width: 220px;
@@ -164,10 +194,10 @@ left: 0;
     width: 6px;
     height: 29px;
     margin-right: 0px;
-    top:7px;
+    top:0;
     right: 0;
     position: relative;
-    left: -5px;
+    left: -15px;
 }
 
 
