@@ -1,37 +1,47 @@
+/* Определяем что устройство не является мобильным */
+
+if( /Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile|Kindle|NetFront|Silk-Accelerated|(hpw|web)OS|Fennec|Minimo|Opera M(obi|ini)|Blazer|Dolfin|Dolphin|Skyfire|Zune/i.test(navigator.userAgent) ) {
 
 /*
-	Callback function that is called immediately after JivoChat is loaded
+	Коллбек-функция, вызывается сразу после того, как
+	JivoSite окончательно загрузился
 */
-function jivo_onLoadCallback(){
-	// Create a DIV element for the label
-	window.jivo_cstm_widget = document.createElement('div');
-	jivo_cstm_widget.setAttribute('id', 'jivo_custom_widget');
-	document.body.appendChild(jivo_cstm_widget);
-	
-	// Adds handlers click on the icon - to maximize the window when clicked
+window.jivo_onLoadCallback = function (){
+	// Создаем элемент DIV для ярлыка
+		window.jivo_cstm_widget = document.createElement('div');
+		jivo_cstm_widget.setAttribute('id', 'jivo_custom_widget');
+		document.body.appendChild(jivo_cstm_widget);
+
+	// Добавляем обработчик клика по ярлыку - чтобы при клике разворачивалось окно
 	jivo_cstm_widget.onclick = function(){
 		jivo_api.open();
 	}
-	
-	// Change the CSS class if there are agents online
+
+	// Изменяем CSS класс, если есть операторы в онлайне
 	if (jivo_config.chat_mode == "online"){
 		jivo_cstm_widget.setAttribute("class", "jivo_online");
 	}
-	
-	// Now you can show the user a shortcut
+
+	// Теперь можно показать ярлык пользователю
 	window.jivo_cstm_widget.style.display='block';
+
 }
 
 /*
-	Callback function jivo_onOpen and jivo_onClose called whenever the chat window JivoChat is expanded or collapsed by the user or by the proactive invitations rule.
+	Коллбек-функции jivo_onOpen и jivo_onClose вызываеются всегда,
+	когда окно чата JivoSite разворачивается или сворвачивается
+	пользователем, либо по правилу активного приглашения.
 */
 function jivo_onOpen(){
-	// If chat is deployed - hide shortcut
+	// Если чат развернут - скрываем ярлык
 	if (jivo_cstm_widget)
 		jivo_cstm_widget.style.display = 'none';
+
 }
 function jivo_onClose(){
-	// If chat is minimized - show label
+	// Если чат свернут - показываем ярлык
 	if (jivo_cstm_widget)
 		jivo_cstm_widget.style.display = 'block';
+}
+
 }

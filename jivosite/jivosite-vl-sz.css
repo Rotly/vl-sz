@@ -7,16 +7,16 @@
 
 /* hide the original widget - that there were no two labels on the screen*/
 #jivo_chat_widget{
-	display: none;
+	/*display: none;*/
 }
 
 .jivo_online{
-	display: none!important;
+
 }
 .message__chat-tovar{
-	display:flex;
+	display:none;
 }
-/* the default style - for offline messages if no one is online */
+/* the default style - for offline messages if no one is online 
 #jivo_custom_widget{
 	position: fixed;
 	z-index: 300000;
@@ -32,7 +32,7 @@
 	top:unset;
 	bottom:25px;
 }
-
+*/
 /* when you hover the label should be shifted to the right by 3px */
 
 
@@ -55,6 +55,7 @@
 .message__chat-mob{
 	display: none;
 }
+/*
 .message__chat-desk{
   max-width: 185px;
   width: 100%;
@@ -78,6 +79,7 @@
     margin: 10px;
     border-radius: 50%;
 }
+*/
 
 @media(max-width:480px)
 {

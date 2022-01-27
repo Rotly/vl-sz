@@ -6,55 +6,23 @@
 /* the default style - for offline messages if no one is online */
 #jivo_custom_widget{
 	position: fixed;
+	left: -3px;
+	top: 30%;
+	width: 35px;
 	z-index: 300000;
-	width: 346px;
-	height: 70px;
-	background-image: url("../img/chat-ceramicpng");
-	background-repeat: no-repeat;
-	right: 65px;
-	border-radius: 10px 10px 0px 0px;
-	display: flex;
 	cursor: pointer;
-	top:unset;
-	bottom:25px;
+	
+	height: 170px;
+	background-image: url(images/jivo_widget_offline.png);
 }
 
 /* when you hover the label should be shifted to the right by 3px */
-
+#jivo_custom_widget:hover{
+	left:0;
+}
 
 /* if there are operators online - show other label*/
 #jivo_custom_widget.jivo_online{
-	position: fixed;
-	z-index: 300000;
-	width: 346px;
-	height: 70px;
-	background-image: url("../img/chat-ceramic.png");
-	background-repeat: no-repeat;
-	right: 65px;
-	border-radius: 10px 10px 0px 0px;
-	display: flex;
-	cursor: pointer;
-	top:unset;
-	bottom:25px;
-}
-.message__chat-tovar,.message__chat-call__link{
-	display:none;
-}
-
-@media(max-width:480px){
-#jivo_custom_widget.jivo_online ,#jivo_custom_widget{
-	padding: 0 30px;
-    margin: 0 5px;
-	width:185px;
-	max-width: 220px;
-	height: 60px;
-    border-radius: 12px;
-    background-image: url("../img/408.png");
-    font-size: 17px;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    cursor: pointer;
-}
+	height: 215px;
+	background-image: url(images/jivo_widget_online.png);
 }
